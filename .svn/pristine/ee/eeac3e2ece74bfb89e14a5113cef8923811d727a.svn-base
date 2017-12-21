@@ -1,0 +1,7 @@
+package com.zh.www.service;
+
+public interface TestService {
+
+	void saveTwoUser();
+
+}

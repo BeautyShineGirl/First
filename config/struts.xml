@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+    <!-- 配置扩展名 -->
+    <constant name="struts.action.extension" value="action"></constant>
+    <constant name="struts.ui.theme" value="simple"></constant>
+        <!-- 设置主题为simple(去掉struts标签自带的样式，使用自己定义的样式) -->
+    <constant name="struts.ui.theme" value="simple"></constant>
+    <package name="sys" namespace="/" extends="struts-default">
+    
+    
+     <action name="test_*" class="testAction" method="{1}">
+            <result name="test">/WEB-INF/jsp/test.jsp</result>
+           
+      </action>
+      
+    </package>
+
+        
+</struts>

@@ -1,0 +1,33 @@
+package cn.nvinfo.base;
+
+import java.lang.reflect.ParameterizedType;
+
+import com.opensymphony.xwork2.ActionSupport;
+import com.opensymphony.xwork2.ModelDriven;
+
+
+
+@SuppressWarnings("serial")
+public class BaseAction<T> extends ActionSupport implements ModelDriven<T>{
+	
+	protected T model;
+	
+	protected Class<?> clazz;
+
+	public T getModel() {
+		
+		 ParameterizedType pt=(ParameterizedType) this.getClass().getGenericSuperclass();
+		 this.clazz=(Class<?>) pt.getActualTypeArguments()[0];
+		 
+		 if(model==null){
+			 try {
+				model=(T) clazz.newInstance();
+			} catch (Exception e) {
+				e.printStackTrace();
+			} 
+		 }
+		 
+		return model;
+	}
+
+}

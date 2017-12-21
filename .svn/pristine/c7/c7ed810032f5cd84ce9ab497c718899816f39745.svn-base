@@ -1,0 +1,26 @@
+package com.zh.www.service.imp;
+
+import javax.annotation.Resource;
+
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.zh.www.dao.TestDao;
+import com.zh.www.domain.User;
+import com.zh.www.service.TestService;
+
+@Service
+@Transactional
+public class TestServiceImp implements TestService {
+
+	@Resource
+	private TestDao testDao;
+	
+	public void saveTwoUser() {
+		
+		testDao.saveTwoUser(new User());
+		//int b=1/0;
+		testDao.saveTwoUser(new User());
+	}
+
+}

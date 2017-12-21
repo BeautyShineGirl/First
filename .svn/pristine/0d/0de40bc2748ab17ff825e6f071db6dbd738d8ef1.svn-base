@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="Ssh"
+  id="myeclipse.1504055562989"
+  context-root="/Ssh"
+  j2ee-spec="5.0"
+  archive="Ssh.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+

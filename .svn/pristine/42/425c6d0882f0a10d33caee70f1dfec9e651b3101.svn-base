@@ -1,0 +1,9 @@
+package com.zh.www.dao;
+
+import com.zh.www.domain.User;
+
+public interface TestDao {
+
+	void saveTwoUser(User user);
+
+}
